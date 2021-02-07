@@ -17,11 +17,15 @@ function calculate() {
         result = parseInt(value1) / parseInt(value2);
     }
 
-
-
     document.getElementById("firstnumber").value = result;
+    addTolist(result);
 
-
-
+}
+function addTolist (result) {
+    let ul = document.getElementById("results");
+    let element = document.createElement("li");
+    element.innerHTML = result;
+    ul.appendChild(element);
+    ul.scrollTop = ul.scrollHeight;
 
 }
