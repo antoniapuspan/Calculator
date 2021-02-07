@@ -19,6 +19,7 @@ function calculate() {
 
     document.getElementById("firstnumber").value = result;
     addTolist(result);
+    check();
 
 }
 function addTolist (result) {
@@ -28,4 +29,7 @@ function addTolist (result) {
     ul.appendChild(element);
     ul.scrollTop = ul.scrollHeight;
 
+}
+function check() {
+    console.log (document.getElementById("doround").checked);
 }
