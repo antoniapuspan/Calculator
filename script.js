@@ -8,5 +8,8 @@ function calculate() {
 
     document.getElementById("firstnumber").value = sum;
 
+    let operator = document.getElementById("operator").value;
+    console.log(operator);
+
 
 }
