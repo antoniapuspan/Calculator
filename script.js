@@ -38,5 +38,7 @@ function addTolist(result) {
 
 }
 function clearFields() {
-    
+    document.getElementById("firstnumber").value = "";
+    document.getElementById("secondnumber").value = null;
+    document.getElementById("results").innerHTML = null;
 }
