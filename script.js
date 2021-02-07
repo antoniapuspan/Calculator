@@ -1,4 +1,5 @@
 document.getElementById("calculate").addEventListener("click", calculate);
+document.getElementById("clear").addEventListener("click", clearFields);
 
 function calculate() {
     let value1 = document.getElementById("firstnumber").value;
@@ -17,12 +18,18 @@ function calculate() {
         result = parseInt(value1) / parseInt(value2);
     }
 
+    if (document.getElementById("doround").checked) {
+        let numberDecimals = document.getElementById("decimals").value;
+        result = result.toFixed(numberDecimals);
+    }
+
+
     document.getElementById("firstnumber").value = result;
     addTolist(result);
-    check();
 
 }
-function addTolist (result) {
+
+function addTolist(result) {
     let ul = document.getElementById("results");
     let element = document.createElement("li");
     element.innerHTML = result;
@@ -30,6 +37,6 @@ function addTolist (result) {
     ul.scrollTop = ul.scrollHeight;
 
 }
-function check() {
-    console.log (document.getElementById("doround").checked);
+function clearFields() {
+    
 }
